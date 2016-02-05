@@ -933,9 +933,9 @@ body {
 
 a {
 	text-decoration: none;
-	color: #e25440; }
+	color: #26c6da; }
 	a:hover {
-		color: #b9301c;
+		color: #0097a7;
 		-o-transition: .5s;
 		-ms-transition: .5s;
 		-moz-transition: .5s;
@@ -1051,7 +1051,7 @@ pre {
 		.time a:hover,
 		.author a:hover,
 		.tags a:hover {
-			color: #b9301c; }
+			color: #26c6da; }
 
 .excerpt {
 	margin: 0;
@@ -1081,7 +1081,7 @@ pre {
 	position: relative;
 	display: inline-block;
 	padding: 8px 18px 9px 18px;
-	background: #e25440;
+	background: #26c6da;
 	border-radius: 3px;
 	text-align: center;
 	color: #FFF; }
@@ -1116,7 +1116,7 @@ pre {
 		color: #a6a6a6;
 		text-decoration: underline; }
 		.footer__copyright a:hover {
-			color: #b9301c; }
+			color: #26c6da; }
 
 .avatar,
 .logo {
@@ -1213,17 +1213,6 @@ hr {
 	width: 40%;
 	max-width: 530px; }
 
-.panel-cover--overlay {
-	display: block;
-	position: absolute;
-	z-index: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(68, 68, 68, 0.6);
-	background-image: -webkit-linear-gradient(-410deg, rgba(68, 68, 68, 0.6) 20%, rgba(0, 0, 0, 0.9));
-	background-image: linear-gradient(140deg,rgba(68, 68, 68, 0.6) 20%, rgba(0, 0, 0, 0.9)); }
 
 .panel-cover__logo {
 	margin-bottom: .2em; }
@@ -1304,24 +1293,24 @@ hr {
 
 .btn, .navigation__item a {
 	padding: 10px 20px;
-	border: 1px solid #e25440;
+	border: 1px solid #26c6da;
 	border-radius: 20px;
 	font-size: .9em;
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-shadow: none;
-	color: #e25440;
+	color: #26c6da;
 	-webkit-font-smoothing: antialiased; }
 	.btn:hover, .navigation__item a:hover {
-		color: #b9301c;
-		border-color: #b9301c; }
+		color: #0097a7;
+		border-color: #0097a7; }
 
 .btn-secondary {
-	border-color: #5ba4e5;
-	color: #5ba4e5; }
+	border-color: #cddc39;
+	color: #cddc39; }
 	.btn-secondary:hover {
-		color: #217fd2;
-		border-color: #217fd2; }
+		color: #9e9d24;
+		border-color: #9e9d24; }
 
 .btn-tertiary {
 	border-color: #999999;
@@ -1439,7 +1428,7 @@ i {
 	.post-list__post-title a {
 		color: #333333; }
 		.post-list__post-title a:hover {
-			color: #b9301c; }
+			color: #0097a7; }
 
 .post-list__meta {
 	display: block;
@@ -1495,7 +1484,7 @@ input[type="tel"] {
 	input[type="url"]:focus,
 	input[type="search"]:focus,
 	input[type="tel"]:focus {
-		border-color: #5ba4e5; }
+		border-color: #cddc39; }
 	input[type="text"]::-webkit-input-placeholder,
 	input[type="password"]::-webkit-input-placeholder,
 	input[type="datetime"]::-webkit-input-placeholder,

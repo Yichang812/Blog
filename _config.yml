@@ -1,6 +1,6 @@
 # Site settings
-title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
+title: Yichang's Blog
+description: 'A personal blog for recording my life'
 url: 'http://Yichang812.github.io/Blog' 
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
@@ -9,7 +9,7 @@ author:
   name: 'Li Yichang'
   email: ariellee121@gmail.com
   github_username:  Yichang812
-  linkedin_username:  Li Yichang
+  linkedin_username: liyichang
 
 # Build settings
 destination: _site

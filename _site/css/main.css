@@ -1,5 +1,5 @@
 @import url(uno.css);
-@import url(monokai.css);
+@import url(autumn.css);
 
 /* Modifications */
 
@@ -24,9 +24,9 @@
 
 .categories a,
 .tags a {
-  border: 1px solid #e25440;
+  border: 1px solid #26c6da;
   border-radius: 20px;
-  color: #e25440;
+  color: #26c6da;
   display: inline-block;
   font-size: 12px;
   margin: 5px 0;
