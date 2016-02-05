@@ -2,7 +2,7 @@
 title: Yichang's Blog
 description: 'A personal blog for recording my life'
 url: 'http://Yichang812.github.io/Blog' 
-baseurl: '/'
+baseurl: '/Blog'
 # google_analytics: 'UA-XXXXXX-X'
 
 author:
