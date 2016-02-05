@@ -2,8 +2,12 @@
 title: Yichang's Blog
 description: 'A personal blog for recording my life'
 url: 'http://Yichang812.github.io/Blog' 
-baseurl: '/Blog'
-# google_analytics: 'UA-XXXXXX-X'
+baseurl: '/Blog/'
+
+#for local testing
+#baseurl: '/'
+
+google_analytics: 'UA-73369864-1'
 
 author:
   name: 'Li Yichang'
