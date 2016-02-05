@@ -3,10 +3,10 @@
   <channel>
     <title>Jekyll-Uno</title>
     <description>Jekyll-Uno - a minimal, responsive theme for Jekyll</description>
-    <link>http://Yichang812.github.io/Blog/</link>
-    <atom:link href="http://Yichang812.github.io/Blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 05 Feb 2016 13:22:45 +0800</pubDate>
-    <lastBuildDate>Fri, 05 Feb 2016 13:22:45 +0800</lastBuildDate>
+    <link>http://Yichang812.github.io/Blog//</link>
+    <atom:link href="http://Yichang812.github.io/Blog//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 05 Feb 2016 14:15:03 +0800</pubDate>
+    <lastBuildDate>Fri, 05 Feb 2016 14:15:03 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -27,8 +27,8 @@
 
 </description>
         <pubDate>Fri, 08 Jan 2016 23:04:23 +0800</pubDate>
-        <link>http://Yichang812.github.io/Blog/2016/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://Yichang812.github.io/Blog/2016/welcome-to-jekyll/</guid>
+        <link>http://Yichang812.github.io/Blog//2016/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/welcome-to-jekyll/</guid>
         
         <category>jekyll</category>
         
