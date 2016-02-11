@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>http://Yichang812.github.io/Blog/2016/RESTful-API-HTTP-Verbs/</loc>
+      
+        <lastmod>2016-02-11T19:31:00+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://Yichang812.github.io/Blog/2016/RESTful-API-General-Introduction/</loc>
       
         <lastmod>2016-02-09T01:58:00+08:00</lastmod>
@@ -36,7 +51,7 @@
     <url>
       <loc>http://Yichang812.github.io/Blog/categories/</loc>
       
-        <lastmod>2016-02-11T19:01:43+08:00</lastmod>
+        <lastmod>2016-02-11T20:06:40+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -51,7 +66,7 @@
     <url>
       <loc>http://Yichang812.github.io/Blog/feed.xml</loc>
       
-        <lastmod>2016-02-11T19:01:43+08:00</lastmod>
+        <lastmod>2016-02-11T20:06:40+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -66,7 +81,7 @@
     <url>
       <loc>http://Yichang812.github.io/Blog/</loc>
       
-        <lastmod>2016-02-11T19:01:43+08:00</lastmod>
+        <lastmod>2016-02-11T20:06:40+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -81,7 +96,7 @@
     <url>
       <loc>http://Yichang812.github.io/Blog/js/main.js</loc>
       
-        <lastmod>2016-02-11T19:01:43+08:00</lastmod>
+        <lastmod>2016-02-11T20:06:40+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -98,7 +113,7 @@
     <url>
       <loc>http://Yichang812.github.io/Blog/tags/</loc>
       
-        <lastmod>2016-02-11T19:01:43+08:00</lastmod>
+        <lastmod>2016-02-11T20:06:40+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

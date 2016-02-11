@@ -5,6 +5,7 @@ date:   2016-02-09 01:58
 categories: [Study Notes]
 tags: [RESTful API]
 ---
+
 ### Introduction
 REST stands for REpresentational State Transfer. It typically, but not always, communicates through HTTP (HyperText Transfer Protocol).
 Instead of a set of standards, it is more like an architectural style, which is affected by 6 constraints.

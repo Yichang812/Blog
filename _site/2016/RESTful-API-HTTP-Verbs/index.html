@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Tags</title>
+  <title>RESTful API, Part II</title>
   <meta name="description" content="A personal blog for recording my life">
   <meta name="author" content="Li Yichang">
   <meta name="HandheldFriendly" content="True">
@@ -26,7 +26,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://Yichang812.github.io/Blog//tags/">
+  <link rel="canonical" href="http://Yichang812.github.io/Blog//2016/RESTful-API-HTTP-Verbs/">
   <link rel="alternate" type="application/rss+xml" title="Yichang's Blog" href="/feed.xml">
 </head>
 
@@ -127,67 +127,66 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <h2>Tags:</h2>
-<div class="tags"> 
- 
-  <a href="#Mics">Mics</a>
- 
-  <a href="#RESTful API">RESTful API</a>
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="11 Feb 2016" class="post-meta__date date">11 Feb 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#RESTful API">RESTful API</a> </span>
+    </div>
+    <h1 class="post-title">RESTful API, Part II</h1>
+  </header>
 
-</div>
+  <section class="post">
+    <h3 id="http-verbs">HTTP Verbs</h3>
+<p>The primary HTTP verbs are <strong>POST</strong>, <strong>GET</strong>, <strong>PUT</strong>, and <strong>DELETE</strong>, which correspond to create, read, update and delete (CRUD) operations.
+THere are number of other verbs, too. Of those less-frequent methods, <strong>OPTIONS</strong> and <strong>HEAD</strong> are used more often than others.</p>
 
-<!-- iterate through all tags on the site --> 
- 
-  <!-- for each tag, create an anchor by using the tag name as an id --> 
-  <div id="Mics">  
-    <h3> Mics </h3>  <!-- for create a heading --> 
+<h4 id="get">GET</h4>
 
-    <ul> <!-- create the list of posts -->
-      <!-- iterate through all the posts on the site --> 
-       
-        <!-- list only those which contain the current tag --> 
-        
-       
-        <!-- list only those which contain the current tag --> 
-        
-       
-        <!-- list only those which contain the current tag --> 
-         
-            <li>
-              <a href="/2016/My-first-post/">First Entry!</a>
-            </li>
-        
-      
-    </ul>
-  </div>
- 
-  <!-- for each tag, create an anchor by using the tag name as an id --> 
-  <div id="RESTful API">  
-    <h3> RESTful API </h3>  <!-- for create a heading --> 
+<ul>
+  <li>Used to retrieve (or read) a representation of a resource.</li>
+  <li>It returns a representation in XML or JSON and an HTTP response code of 200.</li>
+  <li>In error request, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).</li>
+  <li>DO NOT expose unsafe operations via GET.</li>
+</ul>
 
-    <ul> <!-- create the list of posts -->
-      <!-- iterate through all the posts on the site --> 
-       
-        <!-- list only those which contain the current tag --> 
-         
-            <li>
-              <a href="/2016/RESTful-API-HTTP-Verbs/">RESTful API, Part II</a>
-            </li>
-        
-       
-        <!-- list only those which contain the current tag --> 
-         
-            <li>
-              <a href="/2016/RESTful-API-General-Introduction/">RESTful API, Part I</a>
-            </li>
-        
-       
-        <!-- list only those which contain the current tag --> 
-        
-      
-    </ul>
-  </div>
+<h4 id="put">PUT</h4>
 
+<ul>
+  <li>Used for update.</li>
+  <li>It put the newly-updated representation of the original resource to the URI of the resource.</li>
+  <li>It can also be used to create a resource, when the resource ID is chosen by client rather than the server.</li>
+  <li>It returns 200 or 204(NO CONTENT) when executed successfully.</li>
+  <li>Error: 404 if ID not found or invalid.</li>
+  <li>Idempotent but not safe.</li>
+</ul>
+
+<h4 id="post">POST</h4>
+
+<ul>
+  <li>Used for creation of new resource.</li>
+  <li>In particular, it is used to create subordinate resources.</li>
+  <li>Neither idempotent nor safe.</li>
+  <li>Error: 404</li>
+  <li>PUT vs. POST for Creation</li>
+</ul>
+
+<h4 id="delete">DELETE</h4>
+
+<ul>
+  <li>Used to delete a resource identified by a URI.</li>
+  <li>Error: 404</li>
+  <li>Idempotent but not safe</li>
+</ul>
+
+<hr />
+
+<p><em><strong>Idempotence</strong>: describe an operation that will produce the same result when executed multiple times</em></p>
+
+<p><em><strong>Safety</strong>: (read only operation) describe an operation that is intended only for information retrieval and not change the state of the server.
+Which means the operation should have no side effects (except harmless effects: logging, caching, etc.)</em></p>
+
+  </section>
+</article>
       </div>
 
       <footer class="footer">

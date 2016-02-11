@@ -5,9 +5,71 @@
     <description>A personal blog for recording my life</description>
     <link>http://Yichang812.github.io/Blog//</link>
     <atom:link href="http://Yichang812.github.io/Blog//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 11 Feb 2016 19:01:43 +0800</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2016 19:01:43 +0800</lastBuildDate>
+    <pubDate>Thu, 11 Feb 2016 20:06:40 +0800</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 20:06:40 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>RESTful API, Part II</title>
+        <description>&lt;h3 id=&quot;http-verbs&quot;&gt;HTTP Verbs&lt;/h3&gt;
+&lt;p&gt;The primary HTTP verbs are &lt;strong&gt;POST&lt;/strong&gt;, &lt;strong&gt;GET&lt;/strong&gt;, &lt;strong&gt;PUT&lt;/strong&gt;, and &lt;strong&gt;DELETE&lt;/strong&gt;, which correspond to create, read, update and delete (CRUD) operations.
+THere are number of other verbs, too. Of those less-frequent methods, &lt;strong&gt;OPTIONS&lt;/strong&gt; and &lt;strong&gt;HEAD&lt;/strong&gt; are used more often than others.&lt;/p&gt;
+
+&lt;h4 id=&quot;get&quot;&gt;GET&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Used to retrieve (or read) a representation of a resource.&lt;/li&gt;
+  &lt;li&gt;It returns a representation in XML or JSON and an HTTP response code of 200.&lt;/li&gt;
+  &lt;li&gt;In error request, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).&lt;/li&gt;
+  &lt;li&gt;DO NOT expose unsafe operations via GET.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;put&quot;&gt;PUT&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Used for update.&lt;/li&gt;
+  &lt;li&gt;It put the newly-updated representation of the original resource to the URI of the resource.&lt;/li&gt;
+  &lt;li&gt;It can also be used to create a resource, when the resource ID is chosen by client rather than the server.&lt;/li&gt;
+  &lt;li&gt;It returns 200 or 204(NO CONTENT) when executed successfully.&lt;/li&gt;
+  &lt;li&gt;Error: 404 if ID not found or invalid.&lt;/li&gt;
+  &lt;li&gt;Idempotent but not safe.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;post&quot;&gt;POST&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Used for creation of new resource.&lt;/li&gt;
+  &lt;li&gt;In particular, it is used to create subordinate resources.&lt;/li&gt;
+  &lt;li&gt;Neither idempotent nor safe.&lt;/li&gt;
+  &lt;li&gt;Error: 404&lt;/li&gt;
+  &lt;li&gt;PUT vs. POST for Creation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;delete&quot;&gt;DELETE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Used to delete a resource identified by a URI.&lt;/li&gt;
+  &lt;li&gt;Error: 404&lt;/li&gt;
+  &lt;li&gt;Idempotent but not safe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Idempotence&lt;/strong&gt;: describe an operation that will produce the same result when executed multiple times&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Safety&lt;/strong&gt;: (read only operation) describe an operation that is intended only for information retrieval and not change the state of the server.
+Which means the operation should have no side effects (except harmless effects: logging, caching, etc.)&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Feb 2016 19:31:00 +0800</pubDate>
+        <link>http://Yichang812.github.io/Blog//2016/RESTful-API-HTTP-Verbs/</link>
+        <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/RESTful-API-HTTP-Verbs/</guid>
+        
+        <category>RESTful API</category>
+        
+        
+        <category>Study Notes</category>
+        
+      </item>
     
       <item>
         <title>RESTful API, Part I</title>
