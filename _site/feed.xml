@@ -5,9 +5,138 @@
     <description>A personal blog for recording my life</description>
     <link>http://Yichang812.github.io/Blog//</link>
     <atom:link href="http://Yichang812.github.io/Blog//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 05 Feb 2016 16:10:34 +0800</pubDate>
-    <lastBuildDate>Fri, 05 Feb 2016 16:10:34 +0800</lastBuildDate>
+    <pubDate>Thu, 11 Feb 2016 14:56:50 +0800</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 14:56:50 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>RESTful API, Part I</title>
+        <description>&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;REST stands for REpresentational State Transfer. It typically, but not always, communicates through HTTP (HyperText Transfer Protocol).
+Instead of a set of standards, it is more like an architectural style, which is affected by 6 constraints.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Client-Server&lt;/li&gt;
+  &lt;li&gt;Uniform Interface&lt;/li&gt;
+  &lt;li&gt;Stateless&lt;/li&gt;
+  &lt;li&gt;Cacheable&lt;/li&gt;
+  &lt;li&gt;Layered System&lt;/li&gt;
+  &lt;li&gt;Code on Demand &lt;em&gt;(optional)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;client-server&quot;&gt;&lt;strong&gt;Client-Server&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The uniform interface seperates clients from the servers.&lt;/p&gt;
+
+&lt;h4 id=&quot;uniform-interface&quot;&gt;&lt;strong&gt;Uniform Interface&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;4 guiding principles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Resource-Based (URI)&lt;/li&gt;
+  &lt;li&gt;Manipulation of Resources Through Representations (HTTP verbs)&lt;/li&gt;
+  &lt;li&gt;Self-descriptive Messages (HTTP: Content-Type)&lt;/li&gt;
+  &lt;li&gt;Hypermedia as the Engine of Application States&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;stateless&quot;&gt;&lt;strong&gt;Stateless&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Stateless is the key. It means during the client-server communication, no client context is stored on the server between requests.
+Each request from any client contains all the necessary information fro the server to fulfill the request.&lt;/p&gt;
+
+&lt;p&gt;Stateless enables greater scalability, since the server does not have to maintain, update or communicate that session state.&lt;/p&gt;
+
+&lt;p&gt;If a design expects you to do things in order, it violate the statelessness principle.&lt;/p&gt;
+
+&lt;h4 id=&quot;cacheable&quot;&gt;&lt;strong&gt;Cacheable&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;It means clients can cache response. Therefore, responses must implicityly or explicitly define themselves as cacheable or not.
+Well-managed caching partially or completely eliminates some client-server interactions, further improving scalability and performance.&lt;/p&gt;
+
+&lt;h4 id=&quot;layered-system&quot;&gt;&lt;strong&gt;Layered System&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;A client should not tell if it is connected directly to the end server, or to an intermediary.&lt;/p&gt;
+
+&lt;p&gt;Intermediary servers may improve system scalability by enabling load-balancing and by providing shared caches. Layers may also enforce security policies.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
+
+&lt;h4 id=&quot;use-http-verbs-to-mean-something&quot;&gt;&lt;strong&gt;Use HTTP Verbs to Mean Something&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;GET&lt;/strong&gt;: retrieve;  &lt;strong&gt;POST&lt;/strong&gt;: replace;  &lt;strong&gt;PUT&lt;/strong&gt;: create;  &lt;strong&gt;DELETE&lt;/strong&gt;: delete;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;GET&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;POST&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cached&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;no&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;remain in browser history&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;no&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;length restriction&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;yes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;no&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;data type restriction&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;ASCII&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;no&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;visibility&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;displayed in the URL&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;not in the URL&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;sensible-resource-names&quot;&gt;&lt;strong&gt;Sensible Resource Names&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Having sensible resource names or paths (e.g., /posts/23 instead of /api?type=posts&amp;amp;id=23).&lt;/p&gt;
+
+&lt;p&gt;Resource name should be nouns, avoid verbs as resource names.&lt;/p&gt;
+
+&lt;h4 id=&quot;create-fine-grained-resources&quot;&gt;&lt;strong&gt;Create Fine-Grained Resources&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Start with small, easily defined resources, providing CRUD functionality on those. It is easier to create larger 
+resources later from individual resources.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;resources&quot;&gt;Resources:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/RestCheatSheet/api-cheat-sheet#api-design-cheat-sheet&quot;&gt;API design cheatsheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/RestCheatSheet/platform-cheat-sheet#platform-building-cheat-sheet&quot;&gt;Platform building cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;_The notes were summarized based on &lt;strong&gt;RESTful Service Best Practices&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm_&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 09 Feb 2016 01:58:00 +0800</pubDate>
+        <link>http://Yichang812.github.io/Blog//2016/RESTful-API-General-Introduction/</link>
+        <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/RESTful-API-General-Introduction/</guid>
+        
+        <category>RESTful API</category>
+        
+        
+        <category>Study Notes</category>
+        
+      </item>
     
       <item>
         <title>First Entry!</title>
@@ -18,7 +147,7 @@ record my life, both personal life and study life.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Thanks for &lt;strong&gt;Josh Gerdes&lt;/strong&gt; who is the author of &lt;a href=&quot;https://github.com/joshgerdes/jekyll-uno&quot;&gt;Jekyll-Uno&lt;/a&gt;. This blog is build based on his template.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 08 Jan 2016 23:04:23 +0800</pubDate>
+        <pubDate>Fri, 05 Feb 2016 23:04:23 +0800</pubDate>
         <link>http://Yichang812.github.io/Blog//2016/My-first-post/</link>
         <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/My-first-post/</guid>
         

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Yichang's Blog</title>
+  <title>RESTful API, Part I</title>
   <meta name="description" content="A personal blog for recording my life">
   <meta name="author" content="Li Yichang">
   <meta name="HandheldFriendly" content="True">
@@ -27,7 +27,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://Yichang812.github.io/Blog//">
+  <link rel="canonical" href="http://Yichang812.github.io/Blog//2016/RESTful-API-General-Introduction/">
   <link rel="alternate" type="application/rss+xml" title="Yichang's Blog" href="/feed.xml">
 </head>
 
@@ -128,39 +128,133 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <div class="main-post-list">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="9 Feb 2016" class="post-meta__date date">9 Feb 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#RESTful API">RESTful API</a> </span>
+    </div>
+    <h1 class="post-title">RESTful API, Part I</h1>
+  </header>
 
-  <ol class="post-list">
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/RESTful-API-General-Introduction/" title="RESTful API, Part I">RESTful API, Part I</a></h2>
-        <p class="excerpt"><h3 id="introduction">Introduction</h3>
-REST stands for REpresentational State Transfer. It typically, but not always, communicates through HTTP (HyperText Transfer Protocol).
-Instead of a set of standards, it is more like an architectural style, which is affected by 6 constraints.
+  <section class="post">
+    <h3 id="introduction">Introduction</h3>
+<p>REST stands for REpresentational State Transfer. It typically, but not always, communicates through HTTP (HyperText Transfer Protocol).
+Instead of a set of standards, it is more like an architectural style, which is affected by 6 constraints.</p>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="9 Feb 2016" class="post-list__meta--date date">9 Feb 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#RESTful API">RESTful API</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/My-first-post/" title="First Entry!">First Entry!</a></h2>
-        <p class="excerpt">Hi!
-I am Yichang. This is the first entry in my blog. And this is my first blog. I’d like to use this blog as platform to 
-record my life, both personal life and study life.
+<ul>
+  <li>Client-Server</li>
+  <li>Uniform Interface</li>
+  <li>Stateless</li>
+  <li>Cacheable</li>
+  <li>Layered System</li>
+  <li>Code on Demand <em>(optional)</em></li>
+</ul>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="5 Feb 2016" class="post-list__meta--date date">5 Feb 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#Mics">Mics</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-  </ol>
+<h4 id="client-server"><strong>Client-Server</strong></h4>
+<p>The uniform interface seperates clients from the servers.</p>
 
-  <hr class="post-list__divider ">
+<h4 id="uniform-interface"><strong>Uniform Interface</strong></h4>
+<p>4 guiding principles:</p>
 
-  
+<ul>
+  <li>Resource-Based (URI)</li>
+  <li>Manipulation of Resources Through Representations (HTTP verbs)</li>
+  <li>Self-descriptive Messages (HTTP: Content-Type)</li>
+  <li>Hypermedia as the Engine of Application States</li>
+</ul>
 
-</div>
+<h4 id="stateless"><strong>Stateless</strong></h4>
+<p>Stateless is the key. It means during the client-server communication, no client context is stored on the server between requests.
+Each request from any client contains all the necessary information fro the server to fulfill the request.</p>
+
+<p>Stateless enables greater scalability, since the server does not have to maintain, update or communicate that session state.</p>
+
+<p>If a design expects you to do things in order, it violate the statelessness principle.</p>
+
+<h4 id="cacheable"><strong>Cacheable</strong></h4>
+<p>It means clients can cache response. Therefore, responses must implicityly or explicitly define themselves as cacheable or not.
+Well-managed caching partially or completely eliminates some client-server interactions, further improving scalability and performance.</p>
+
+<h4 id="layered-system"><strong>Layered System</strong></h4>
+<p>A client should not tell if it is connected directly to the end server, or to an intermediary.</p>
+
+<p>Intermediary servers may improve system scalability by enabling load-balancing and by providing shared caches. Layers may also enforce security policies.</p>
+
+<hr />
+
+<h3 id="tips">Tips</h3>
+
+<h4 id="use-http-verbs-to-mean-something"><strong>Use HTTP Verbs to Mean Something</strong></h4>
+
+<p><strong>GET</strong>: retrieve;  <strong>POST</strong>: replace;  <strong>PUT</strong>: create;  <strong>DELETE</strong>: delete;</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right"> </th>
+      <th style="text-align: center">GET</th>
+      <th style="text-align: center">POST</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">cached</td>
+      <td style="text-align: center">yes</td>
+      <td style="text-align: center">no</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">remain in browser history</td>
+      <td style="text-align: center">yes</td>
+      <td style="text-align: center">no</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">length restriction</td>
+      <td style="text-align: center">yes</td>
+      <td style="text-align: center">no</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">data type restriction</td>
+      <td style="text-align: center">ASCII</td>
+      <td style="text-align: center">no</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">visibility</td>
+      <td style="text-align: center">displayed in the URL</td>
+      <td style="text-align: center">not in the URL</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sensible-resource-names"><strong>Sensible Resource Names</strong></h4>
+
+<p>Having sensible resource names or paths (e.g., /posts/23 instead of /api?type=posts&amp;id=23).</p>
+
+<p>Resource name should be nouns, avoid verbs as resource names.</p>
+
+<h4 id="create-fine-grained-resources"><strong>Create Fine-Grained Resources</strong></h4>
+
+<p>Start with small, easily defined resources, providing CRUD functionality on those. It is easier to create larger 
+resources later from individual resources.</p>
+
+<hr />
+
+<h3 id="resources">Resources:</h3>
+
+<ul>
+  <li><a href="https://github.com/RestCheatSheet/api-cheat-sheet#api-design-cheat-sheet">API design cheatsheet</a></li>
+  <li><a href="https://github.com/RestCheatSheet/platform-cheat-sheet#platform-building-cheat-sheet">Platform building cheatsheet</a></li>
+</ul>
+
+<hr />
+
+<h3 id="reference">Reference</h3>
+<ul>
+  <li>_The notes were summarized based on <strong>RESTful Service Best Practices</strong></li>
+  <li>http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm_</li>
+</ul>
+
+  </section>
+</article>
       </div>
 
       <footer class="footer">

@@ -31,7 +31,22 @@ q:before, q:after {
 
 table {
 	border-collapse: collapse;
-	border-spacing: 0; }
+	border-spacing: 0;
+	border:1px solid #dddddd;
+	margin: 20px 0 20px 0;
+}
+
+th{
+	border:1px solid #dddddd;
+	padding:5px 5px 5px 5px;
+	background-color:#26c6da;
+	color:#ffffff;
+}
+
+td{
+	border:1px solid #dddddd;
+	padding:5px 5px 5px 5px;
+}
 
 body {
 	width: 100%;
@@ -992,7 +1007,7 @@ blockquote {
 	border: 1px solid #eeeeee;
 	border-radius: 3px;
 	font-family: Exo, serif;
-	font-weight: 500;
+	font-weight: 400;
 	font-style: italic;
 	font-size: 1.3em;
 	text-align: center; }
