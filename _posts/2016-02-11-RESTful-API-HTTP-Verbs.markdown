@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "RESTful API, Part II"
+title:  "RESTful API, HTTP Verbs (Part II)"
 date:   2016-02-11 19:31
 categories: [Study Notes]
 tags: [RESTful API]
 ---
 
-### HTTP Verbs
 The primary HTTP verbs are **POST**, **GET**, **PUT**, and **DELETE**, which correspond to create, read, update and delete (CRUD) operations.
 THere are number of other verbs, too. Of those less-frequent methods, **OPTIONS** and **HEAD** are used more often than others.
 
