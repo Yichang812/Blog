@@ -3,7 +3,7 @@ layout: post
 title:  "RESTful API, Part I"
 date:   2016-02-09 01:58
 categories: [Study Notes]
-tags: [RESTful]
+tags: [RESTful API]
 ---
 
 ### Introduction
