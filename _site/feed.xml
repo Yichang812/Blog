@@ -3,10 +3,10 @@
   <channel>
     <title>Yichang&#39;s Blog</title>
     <description>A personal blog for recording my life</description>
-    <link>http://Yichang812.github.io/Blog/Blog/</link>
-    <atom:link href="http://Yichang812.github.io/Blog/Blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Feb 2016 22:29:01 +0800</pubDate>
-    <lastBuildDate>Fri, 12 Feb 2016 22:29:01 +0800</lastBuildDate>
+    <link>http://Yichang812.github.io/Blog//</link>
+    <atom:link href="http://Yichang812.github.io/Blog//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 16 Feb 2016 15:44:02 +0800</pubDate>
+    <lastBuildDate>Tue, 16 Feb 2016 15:44:02 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -44,8 +44,8 @@ $ bundle install
 &lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Fri, 12 Feb 2016 19:55:00 +0800</pubDate>
-        <link>http://Yichang812.github.io/Blog/Blog/2016/My-First-Ruby-On-Rails-App/</link>
-        <guid isPermaLink="true">http://Yichang812.github.io/Blog/Blog/2016/My-First-Ruby-On-Rails-App/</guid>
+        <link>http://Yichang812.github.io/Blog//2016/My-First-Ruby-On-Rails-App/</link>
+        <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/My-First-Ruby-On-Rails-App/</guid>
         
         <category>Ruby on rails</category>
         
@@ -105,8 +105,8 @@ THere are number of other verbs, too. Of those less-frequent methods, &lt;strong
 Which means the operation should have no side effects (except harmless effects: logging, caching, etc.)&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 11 Feb 2016 19:31:00 +0800</pubDate>
-        <link>http://Yichang812.github.io/Blog/Blog/2016/RESTful-API-HTTP-Verbs/</link>
-        <guid isPermaLink="true">http://Yichang812.github.io/Blog/Blog/2016/RESTful-API-HTTP-Verbs/</guid>
+        <link>http://Yichang812.github.io/Blog//2016/RESTful-API-HTTP-Verbs/</link>
+        <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/RESTful-API-HTTP-Verbs/</guid>
         
         <category>RESTful API</category>
         
@@ -233,8 +233,8 @@ resources later from individual resources.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 09 Feb 2016 01:58:00 +0800</pubDate>
-        <link>http://Yichang812.github.io/Blog/Blog/2016/RESTful-API-General-Introduction/</link>
-        <guid isPermaLink="true">http://Yichang812.github.io/Blog/Blog/2016/RESTful-API-General-Introduction/</guid>
+        <link>http://Yichang812.github.io/Blog//2016/RESTful-API-General-Introduction/</link>
+        <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/RESTful-API-General-Introduction/</guid>
         
         <category>RESTful API</category>
         
@@ -253,8 +253,8 @@ record my life, both personal life and study life.&lt;/p&gt;
 &lt;p&gt;Thanks for &lt;strong&gt;Josh Gerdes&lt;/strong&gt; who is the author of &lt;a href=&quot;https://github.com/joshgerdes/jekyll-uno&quot;&gt;Jekyll-Uno&lt;/a&gt;. This blog is build based on his template.&lt;/p&gt;
 </description>
         <pubDate>Fri, 05 Feb 2016 23:04:23 +0800</pubDate>
-        <link>http://Yichang812.github.io/Blog/Blog/2016/My-first-post/</link>
-        <guid isPermaLink="true">http://Yichang812.github.io/Blog/Blog/2016/My-first-post/</guid>
+        <link>http://Yichang812.github.io/Blog//2016/My-first-post/</link>
+        <guid isPermaLink="true">http://Yichang812.github.io/Blog//2016/My-first-post/</guid>
         
         <category>Mics</category>
         
