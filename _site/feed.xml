@@ -5,21 +5,13 @@
     <description>A personal blog for recording my life</description>
     <link>http://Yichang812.github.io/Blog//</link>
     <atom:link href="http://Yichang812.github.io/Blog//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 16 Feb 2016 15:44:02 +0800</pubDate>
-    <lastBuildDate>Tue, 16 Feb 2016 15:44:02 +0800</lastBuildDate>
+    <pubDate>Tue, 16 Feb 2016 15:46:15 +0800</pubDate>
+    <lastBuildDate>Tue, 16 Feb 2016 15:46:15 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>My First Ruby On Rails App</title>
         <description>&lt;p&gt;&lt;em&gt;I start my first rudy on rails project by following &lt;a href=&quot;https://www.youtube.com/watch?v=GY7Ps8fqGdc&quot;&gt;this&lt;/a&gt; tutorial.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://installrails.com/steps/choose_os&quot;&gt;Ruby on Rails&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;MySQL (installed by &lt;a href=&quot;http://brew.sh&quot;&gt;Homebrew&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Make sure the version of your rails (4.2.0+) and ruby (2.2.0+)&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;initiation&quot;&gt;Initiation&lt;/h3&gt;
 
@@ -42,6 +34,16 @@ $ bundle install
 &amp;lt;%= ruby with output%&amp;gt;
 &amp;lt;%# comments%&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;For Installation&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://installrails.com/steps/choose_os&quot;&gt;Ruby on Rails&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;MySQL (installed by &lt;a href=&quot;http://brew.sh&quot;&gt;Homebrew&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Make sure the version of your rails (4.2.0+) and ruby (2.2.0+)&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 12 Feb 2016 19:55:00 +0800</pubDate>
         <link>http://Yichang812.github.io/Blog//2016/My-First-Ruby-On-Rails-App/</link>
